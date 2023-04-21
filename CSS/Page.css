@@ -9,10 +9,93 @@
     left: 800px;
     clip: rect(0px,200px,300px,0px);
 }
+::placeholder{
+    font-size: 15px;
+}
+:-ms-input-placeholder {
+    font-size: 15px;
+}
+::-ms-input-placeholder {
+    font-size: 15px;
+}
 
-p{
+p, th, td{
     font-size: 20px;
-    color: black;
+    color: rgb(0, 190, 190);
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+th{
+    font-size: 15px;
+    color: black;
+    text-align: left;
+    padding: 20px;
+}
+
+td{
+    font-size: 13px;
+    color: black;
+    text-align: left;
+    padding: 20px;
+}
+
+h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    right: 50px;
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
