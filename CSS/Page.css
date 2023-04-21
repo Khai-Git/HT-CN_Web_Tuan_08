@@ -19,7 +19,7 @@
     font-size: 15px;
 }
 
-p, th, td{
+p {
     font-size: 20px;
     color: black;
     padding-bottom: 10px;
@@ -40,20 +40,6 @@ tr:nth-child(even){
     background-color: #dddddd;
 }
 
-th{
-    font-size: 15px;
-    color: black;
-    text-align: left;
-    padding: 20px;
-}
-
-td {
-    padding-left: 20px;
-    font-size: 13px;
-    color: black;
-    text-align: left;
-}
-
 b {
     font-size: 16px;
     padding-left: 20px;
@@ -63,8 +49,25 @@ h4{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.button_Menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
-button:hover, .btn-link {
+.button:hover {
     text-decoration: underline;
     color: red;
 }

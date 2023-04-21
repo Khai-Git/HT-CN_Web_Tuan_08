@@ -24,8 +24,10 @@
                     <div><img src="/IMAGES/Doctor.jpg" id="clip" alt="" style="width: 300px;height: 200px;top: 0px;"></div>
                 </div>
                 <div id="Menu" style="display: flex;border-bottom: 2px solid black;">
-                    <button class="btn btn-link" style="text-decoration: none;"><p>Trang chủ</p></button>
-                    <button class="btn btn-link" style="text-decoration: none;" id="btn_Dat_lich"><p>Đặt lịch</p></button>
+                    <div class="button_Menu">
+                        <input type="button" class="button" value="Trang chủ" style="height: 60px;width: 100px;background-color: transparent;border: 0px;font-size: 17px;color: rgb(39, 185, 185);">
+                        <input type="button" class="button" id="btn_Dat_lich" value="Đặt lịch" style="height: 60px;width: 100px;background-color: transparent;border: 0px;font-size: 17px;color: rgb(39, 185, 185);">
+                    </div>
                     <div id="Dat_Lich" class="modal">
                         <div class="modal-content">
                             <span class="close"><h5 style="font-size: 30px;">&times;</h5></span>
@@ -36,7 +38,7 @@
                                 <hr>
                                 <div style="padding-left: 20px;padding-right: 20px;">
                                     <div style="padding-bottom: 10px;">
-                                        <h4><b>Mã bệnh nhân</b></h4>
+                                        <h4>Mã bệnh nhân</h4>
                                         <input type="text" id="ma_benh_nhan" placeholder="Ma benh nhan" style="width: 100%;height: 34px;padding: 5px;padding-left: 10px;">
                                         <h4 style="color: red; font-size: 16px;margin-top: 5px;margin-bottom: 5px;"><i>(*)BN-YYYYYY</i></h4>
                                     </div>
@@ -87,25 +89,33 @@
                     </div>
                 </div>
             </div>
-            <div style="display: flex;background-color: #dddddd;border-bottom: 2px solid rgb(199, 199, 199);">
+            <!-- <div style="display: flex;background-color: #dddddd;border-bottom: 2px solid rgb(199, 199, 199);">
                 <p><b>STT</b></p>
                 <p><b>Mã bệnh nhân</b></p>
                 <p style="padding-left: 60px;"><b>Mật khẩu</b></p>
                 <p style="padding-left: 90px;"><b>Ngày khám</b></p>
                 <p style="padding-left: 70px;"><b>Phụ thu dịch vụ</b></p>
                 <p><b>Chuyên khoa</b></p>
-                <!-- <h5><b>STT</b></h5>
+                <h5><b>STT</b></h5>
                 <h5><b>Mã bệnh nhân</b></h5>
                 <h5><b>Mật khẩu</b></h5>
                 <h5><b>Ngày khám</b></h5>
                 <h5><b>Phụ thu dịch vụ</b></h5>
-                <h5><b>Chuyên khoa</b></h5> -->
-            </div>
-            <div id="center" style="border-bottom: 2px solid black;padding-left: 20px;padding-top: 5px;">
-                <table id="ds_BenhNhan">
+                <h5><b>Chuyên khoa</b></h5>
+            </div> -->
+            <div id="center" style="border-bottom: 2px solid black;padding-top: 5px;padding-left: 20px;">
+                <table id="ds_BenhNhan" style="width: 100%;">
+                    <tr style="text-align: left;">
+                        <th style="width: 6%;">STT</th>
+                        <th>Mã bênh nhân</th>
+                        <th>Mật khẩu</th>
+                        <th>Ngày khám</th>
+                        <th>Phụ thu dịch vụ</th>
+                        <th>Chuyên khoa</th>
+                    </tr>
                     <tr>
                         <td>1</td>
-                        <td style="padding-left: 30px;">123456a</td>
+                        <td>123456a</td>
                         <td>BN-012345</td>
                         <td>12/08/2020</td>
                         <td>1000000</td>
