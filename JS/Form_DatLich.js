@@ -1,5 +1,5 @@
 var modal = document.getElementById("Dat_Lich")
-var btn = document.getElementById("btn_Dat_lich")
+var btn = document.getElementById("btn_Form_DatLich")
 var span = document.getElementsByClassName("close")[0]
 
 btn.onclick = function() {
