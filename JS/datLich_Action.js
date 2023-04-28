@@ -20,20 +20,14 @@ modal_action.onclick = function () {
     }
 
     let ngay_kham = document.getElementById('ngay_kham').value
+    console.log(ngay_kham)
     let today = new Date()
     if (ngay_kham > today.getTime()) {
-        let day = ngay_kham.getDate()
-        let month = ngay_kham.getMonth()
-        let year = ngay_kham.getFullYear()
-        var a = ""
-        a = a + "<p>" + day + "</p>" 
-        a = a + "<p>" + month + "</p>" 
-        a = a + "<p>" + year + "</p>" 
-        var b = "<p>" + a + "</p>"
-        x = x + "<td>" + b + "</td>"
-        // x = x + ngay_kham
+        x = x + "<td>" + ngaykham + "</td>"
+        // x = x + ngaykham
     }
     console.log(ngay_kham)
+    console.log(x)
 
     let dv1 = document.getElementById('c1')
     let dv2 = document.getElementById('c2')
