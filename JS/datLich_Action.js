@@ -20,14 +20,12 @@ modal_action.onclick = function () {
     }
 
     let ngay_kham = document.getElementById('ngay_kham').value
-    console.log(ngay_kham)
     let today = new Date()
-    if (ngay_kham > today.getTime()) {
-        x = x + "<td>" + ngaykham + "</td>"
-        // x = x + ngaykham
+    if (ngay_kham < today.getTime()) {
+        alert("Ngày khám không hợp lệ")
+    } else {
+        x = x + "<td>" + ngay_kham + "</td>"
     }
-    console.log(ngay_kham)
-    console.log(x)
 
     let dv1 = document.getElementById('c1')
     let dv2 = document.getElementById('c2')
@@ -48,4 +46,10 @@ modal_action.onclick = function () {
     x = x + "<td>" + chuyen_khoa + "</td>"
 
     document.getElementById("list").innerHTML = (stt + 1) + x
+
+    document.getElementById("ma_benh_nhan").innerHTML = ""
+    document.getElementById('mat_khau').innerHTML = ""
+    document.getElementById("datLich_Action").addEventListener("click", function(event){
+        event.preventDefault()
+    })
 }
