@@ -1,38 +1,18 @@
 var modal_action = document.getElementById("datLich_Action")
-var reset_action = document.getElementById('reset_Action')
 
-let stt = 0
-
-//This action can do multiple time
 modal_action.onclick = function () {
-    var money = 500000
-
-    let tbl = document.getElementById('ds_BenhNhan')
-    let row = tbl.insertRow()
-    let cell1 = row.insertCell()
-    let cell2 = row.insertCell()
-    let cell3 = row.insertCell()
-    let cell4 = row.insertCell()
-    let cell5 = row.insertCell()
-    let cell6 = row.insertCell()
-    
-    stt++
-    cell1.innerHTML = stt + 1
-
-    let ma_benh_nhan = document.getElementById("ma_benh_nhan").value
     let check_mabenhnhan = /^BN-\d{5}/g
-    if (ma_benh_nhan.length == 0 || !(ma_benh_nhan.match(check_mabenhnhan))) {
-        alert('Chú ý nhập đúng mẫu')
-    } else {
-        cell2.innerHTML = document.getElementById("ma_benh_nhan").value
+    let ma_benh_nhan = document.getElementById("ma_benh_nhan").value
+    var x = ""
+    var money = 500000
+    if (ma_benh_nhan.length != 0) {
+        x = x + "<td>" + ma_benh_nhan.match(check_mabenhnhan) + "</td>"
     }
 
     let check_matkhau = /.{6}.+/g
     let mat_khau = document.getElementById('mat_khau').value
-    if (mat_khau.length == 0 || !(mat_khau.match(check_matkhau))) {
-        alert('Chú ý nhập đúng mẫu')
-    } else {
-        cell3.innerHTML = document.getElementById('mat_khau').value
+    if (mat_khau.length != 0) {
+        x = x + "<td>" + mat_khau.match(check_matkhau) + "</td>"
     }
 
     let ngay_kham = document.getElementById('ngay_kham').value
@@ -41,7 +21,7 @@ modal_action.onclick = function () {
     if (ngay_kham < today.getTime()) {
         alert("Ngày khám không hợp lệ")
     } else {
-        cell4.innerHTML = ngay_kham.match(check_ngaykham)
+        x = x + "<td>" + ngay_kham.match(check_ngaykham) + "</td>"
     }
 
     let dv1 = document.getElementById('c1')
@@ -57,12 +37,13 @@ modal_action.onclick = function () {
     if (dv3.checked == true) {
         sum = sum + money
     }
-    cell5.innerHTML = sum
+    x = x + "<td>" + sum + "</td>"
 
-    // let chuyen_khoa = document.getElementById("select").value
-    cell6.innerHTML = document.getElementById("select").value
-}
-reset_action.onclick = function () {
+    let chuyen_khoa = document.getElementById("select").value
+    x = x + "<td>" + chuyen_khoa + "</td>"
+
+    document.getElementById("list").innerHTML = index + x
+
     document.getElementById("ma_benh_nhan").value = ""
     document.getElementById('mat_khau').value = ""
     document.getElementById('ngay_kham').value = ""
@@ -70,4 +51,6 @@ reset_action.onclick = function () {
     document.getElementById('c2').checked = false
     document.getElementById('c3').checked = false
     document.getElementById("select").value = "Ngoại tổng quát"
+
+    modal.style.display = "none"
 }
