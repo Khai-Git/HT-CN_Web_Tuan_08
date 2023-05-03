@@ -22,7 +22,7 @@ modal_action.onclick = function () {
     let ma_benh_nhan = document.getElementById("ma_benh_nhan").value
     let check_mabenhnhan = /^BN-\d{5}/g
     if (ma_benh_nhan.length == 0 || !(ma_benh_nhan.match(check_mabenhnhan))) {
-        alert('Chú ý nhập đúng mẫu')
+        alert('Chú ý nhập đúng mẫu mã bệnh nhân')
     } else {
         cell2.innerHTML = document.getElementById("ma_benh_nhan").value
     }
@@ -30,7 +30,7 @@ modal_action.onclick = function () {
     let check_matkhau = /.{6}.+/g
     let mat_khau = document.getElementById('mat_khau').value
     if (mat_khau.length == 0 || !(mat_khau.match(check_matkhau))) {
-        alert('Chú ý nhập đúng mẫu')
+        alert('Chú ý nhập đúng mẫu mật khẩu')
     } else {
         cell3.innerHTML = document.getElementById('mat_khau').value
     }
