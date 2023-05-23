@@ -20,14 +20,14 @@ modal_action.onclick = function () {
     cell1.innerHTML = stt + 1
 
     let ma_benh_nhan = document.getElementById("ma_benh_nhan").value
-    let check_mabenhnhan = /^BN-\d{5}/g
-    if (ma_benh_nhan.length == 0 || !(ma_benh_nhan.match(check_mabenhnhan))) {
+    let check_mabenhnhan = /BN-\d{5}\b/g
+    if (ma_benh_nhan === '' || !(ma_benh_nhan.match(check_mabenhnhan))) {
         alert('Chú ý nhập đúng mẫu mã bệnh nhân')
     } else {
         cell2.innerHTML = document.getElementById("ma_benh_nhan").value
     }
 
-    let check_matkhau = /.{6}.+/g
+    let check_matkhau = /.{6}.+\b/g
     let mat_khau = document.getElementById('mat_khau').value
     if (mat_khau.length == 0 || !(mat_khau.match(check_matkhau))) {
         alert('Chú ý nhập đúng mẫu mật khẩu')
